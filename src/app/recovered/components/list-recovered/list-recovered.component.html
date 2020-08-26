@@ -1,0 +1,22 @@
+<table class="table table-hover">
+  <thead class="thead-gray">
+    <tr>
+      <th scope="col">Id.</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Ver</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let recovered of recovereds">
+      <td>{{ recovered.id }}</td>
+      <td>{{ recovered.name }}</td>
+      <td>{{ recovered.age }}</td>
+      <td><button class="btn btn-outline-primary" routerLink="/recovered/{{ recovered.id }}"><i class="far fa-eye"></i>Ver</button></td>
+      <td><button class="btn btn-outline-warning" routerLink="/recovered/{{ recovered.id }}"><i class="far fa-edit"></i>Editar</button></td>
+      <td><button class="btn btn-outline-danger"><i class="far fa-eye"></i>Borrar</button></td>
+    </tr>
+  </tbody>
+</table>

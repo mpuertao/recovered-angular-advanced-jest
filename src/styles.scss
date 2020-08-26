@@ -1,0 +1,40 @@
+.recovered-grid {
+  display: flex;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px 20px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .recovered-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container {
+    max-width: 1110px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+img {
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
