@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { RecoveredService } from '../../service/recovered.service';
 import { Recovered } from '../../model/recovered.model';
-import { ToastrService } from 'ngx-toastr';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-recovered-detail',
@@ -11,27 +11,30 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class RecoveredDetailComponent implements OnInit {
 
-  recovered: Recovered = null;
+  recovered: Recovered;
+  mensajeError: any;
+  sub: Subscription;
 
   constructor(
     private route: ActivatedRoute,
     private recoveredService: RecoveredService,
-    private toastrService: ToastrService,
     private router: Router,
   ) { }
 
-  // tslint:disable-next-line:typedef
-  ngOnInit() {
-    const id = this.route.snapshot.params.id;
-    this.recoveredService.getRecoveredById(id).subscribe(
-      data => {
-        this.recovered = data;
-      },
-      err => {
-        this.toastrService.error(err.error.mensaje, 'Fail', {
-          timeOut: 3000, positionClass: 'toast-top-center',
-        });
+  ngOnInit(): void {
+    this.sub = this.route.params.subscribe(
+      params => {
+        const id = params.id;
+        this.getRecoveredById(id);
       }
+    );
+  }
+
+  getRecoveredById(id: number) {
+    this.recoveredService.getRecoveredById(id)
+    .subscribe(
+      data => this.recovered = data,
+      err => this.mensajeError = err,
     );
   }
 
