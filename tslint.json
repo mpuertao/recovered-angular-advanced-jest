@@ -65,7 +65,7 @@
     ],
     "no-empty": false,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-non-null-assertion": true,
@@ -95,7 +95,7 @@
       }
     },
     "typedef": [
-      true,
+      false,
       "call-signature"
     ],
     "typedef-whitespace": {
@@ -135,11 +135,11 @@
     },
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
-    "no-input-rename": true,
+    "no-input-rename": false,
     "no-inputs-metadata-property": true,
     "no-output-native": true,
     "no-output-on-prefix": true,
-    "no-output-rename": true,
+    "no-output-rename": false,
     "no-outputs-metadata-property": true,
     "template-banana-in-box": true,
     "template-no-negated-async": true,
