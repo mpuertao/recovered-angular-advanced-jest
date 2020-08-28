@@ -7,13 +7,25 @@ module.exports = {
   ],
   transformIgnorePatterns: [
     "node_modules/(?!@ngrx|ngx-socket-io|ngx-auto-unsubscribe)",
- ],
- transform: {
-   "^.+\\.(ts|js|html)$": "ts-jest",
+  ],
+  transform: {
+  "^.+\\.(ts|js|html)$": "ts-jest",
   },
   testPathIgnorePatterns: [
     "<rootDir>/node_modules/",
     "<rootDir>/dist/",
     "<rootDir>/cypress/",
   ],
+  coverageReporters: [
+    "html",
+    "json",
+    "text",
+    "lcov",
+    "clover",
+    "cobertura"
+  ],
+  reporters: [
+    "default",
+    "jest-junit"
+  ]
 };

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="22" failures="0" time="14.058">
+  <testsuite name="Pruebas para el component ListRecoveredComponent" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:35" time="4.867" tests="4">
+    <testcase classname="Pruebas para el component ListRecoveredComponent Debe cargar los recovereds en getAllRecovered" name="Pruebas para el component ListRecoveredComponent Debe cargar los recovereds en getAllRecovered" time="0.009">
+    </testcase>
+    <testcase classname="Pruebas para el component ListRecoveredComponent Deberia llamar al servicio getAllRecovered" name="Pruebas para el component ListRecoveredComponent Deberia llamar al servicio getAllRecovered" time="0.002">
+    </testcase>
+    <testcase classname="Pruebas para el component ListRecoveredComponent Deberia comparar el objeto acorde a lo recibido" name="Pruebas para el component ListRecoveredComponent Deberia comparar el objeto acorde a lo recibido" time="0.004">
+    </testcase>
+    <testcase classname="Pruebas para el component ListRecoveredComponent Deberia devolver la excepcion al error del servicio" name="Pruebas para el component ListRecoveredComponent Deberia devolver la excepcion al error del servicio" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginComponent" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:35" time="4.84" tests="1">
+    <testcase classname="LoginComponent should create" name="LoginComponent should create" time="0.162">
+    </testcase>
+  </testsuite>
+  <testsuite name="EditRecoveredComponent" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:36" time="5.038" tests="1">
+    <testcase classname="EditRecoveredComponent should create" name="EditRecoveredComponent should create" time="0.28">
+    </testcase>
+  </testsuite>
+  <testsuite name="PageNotFoundComponent" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:35" time="5.34" tests="1">
+    <testcase classname="PageNotFoundComponent should create" name="PageNotFoundComponent should create" time="0.296">
+    </testcase>
+  </testsuite>
+  <testsuite name="ContactComponent" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:40" time="1.457" tests="1">
+    <testcase classname="ContactComponent should create" name="ContactComponent should create" time="0.147">
+    </testcase>
+  </testsuite>
+  <testsuite name="AppComponent" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:40" time="1.581" tests="1">
+    <testcase classname="AppComponent should create the app" name="AppComponent should create the app" time="0.239">
+    </testcase>
+  </testsuite>
+  <testsuite name="AdminGuard" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:41" time="1.387" tests="1">
+    <testcase classname="AdminGuard should be created" name="AdminGuard should be created" time="0.084">
+    </testcase>
+  </testsuite>
+  <testsuite name="RecoveredService" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:36" time="8.96" tests="2">
+    <testcase classname="RecoveredService Pruebas para metodo getAllRecovered en el servicio Deberia obtener recovereds de getAllRecovered" name="RecoveredService Pruebas para metodo getAllRecovered en el servicio Deberia obtener recovereds de getAllRecovered" time="0.017">
+    </testcase>
+    <testcase classname="RecoveredService Pruebas para metodo getAllRecovered en el servicio Preuebas para el metodo getRecoveredById en el servicio Deberia devolver el id del recovered" name="RecoveredService Pruebas para metodo getAllRecovered en el servicio Preuebas para el metodo getRecoveredById en el servicio Deberia devolver el id del recovered" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Incrementador Component" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:35" time="9.256" tests="5">
+    <testcase classname="Incrementador Component should create" name="Incrementador Component should create" time="0.188">
+    </testcase>
+    <testcase classname="Incrementador Component Debe de mostrar la leyenda" name="Incrementador Component Debe de mostrar la leyenda" time="0.072">
+    </testcase>
+    <testcase classname="Incrementador Component Debe de mostrar en el input el valor del progreso" name="Incrementador Component Debe de mostrar en el input el valor del progreso" time="0.058">
+    </testcase>
+    <testcase classname="Incrementador Component Debe de incrementar/decrementar en 5, con un click en el botón" name="Incrementador Component Debe de incrementar/decrementar en 5, con un click en el botón" time="0.047">
+    </testcase>
+    <testcase classname="Incrementador Component En el titulo del componente, debe de mostrar el progreso" name="Incrementador Component En el titulo del componente, debe de mostrar el progreso" time="0.042">
+    </testcase>
+  </testsuite>
+  <testsuite name="RecoveredDetailComponent" errors="0" failures="0" skipped="0" timestamp="2020-08-28T15:44:36" time="9.868" tests="5">
+    <testcase classname="RecoveredDetailComponent Pruebas para el ngOnInit y metodo ppal getRecoverdById Pruebas ngOnInit" name="RecoveredDetailComponent Pruebas para el ngOnInit y metodo ppal getRecoverdById Pruebas ngOnInit" time="0.01">
+    </testcase>
+    <testcase classname="RecoveredDetailComponent Pruebas para el ngOnInit y metodo ppal getRecoverdById No se deberia llamar a getId sin sub" name="RecoveredDetailComponent Pruebas para el ngOnInit y metodo ppal getRecoverdById No se deberia llamar a getId sin sub" time="0.003">
+    </testcase>
+    <testcase classname="RecoveredDetailComponent Pruebas para el ngOnInit y metodo ppal getRecoverdById Deberia llamar el metodo getRecoveredById exitosamente" name="RecoveredDetailComponent Pruebas para el ngOnInit y metodo ppal getRecoverdById Deberia llamar el metodo getRecoveredById exitosamente" time="0.004">
+    </testcase>
+    <testcase classname="RecoveredDetailComponent Pruebas para el route volver() Deberia navegar hacia /" name="RecoveredDetailComponent Pruebas para el route volver() Deberia navegar hacia /" time="0.001">
+    </testcase>
+    <testcase classname="RecoveredDetailComponent Pruebas para el OnDestroy Deberia desubscribir con unsubscribe" name="RecoveredDetailComponent Pruebas para el OnDestroy Deberia desubscribir con unsubscribe" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>

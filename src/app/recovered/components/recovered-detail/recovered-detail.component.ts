@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { RecoveredService } from '../../service/recovered.service';
 import { Recovered } from '../../model/recovered.model';
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './recovered-detail.component.html',
   styleUrls: ['./recovered-detail.component.scss']
 })
-export class RecoveredDetailComponent implements OnInit {
+export class RecoveredDetailComponent implements OnInit, OnDestroy {
 
   recovered: Recovered;
   mensajeError: any;
@@ -40,5 +40,9 @@ export class RecoveredDetailComponent implements OnInit {
 
   volver(): void {
     this.router.navigate(['/']);
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }
