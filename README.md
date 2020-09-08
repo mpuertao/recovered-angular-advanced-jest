@@ -1,5 +1,5 @@
 # recovered-angular-advanced-jest
-Proyecto en Angular 10 que busca ejemplificar las pruebas unitarias con JEST, aplicación que consume servicio Rest API en Springboot con BD Mongo
+Proyecto en Angular 10 que busca ejemplificar las pruebas unitarias con JEST, aplicación que consume servicio Rest API en Springboot con BD Mongo, aqui puedes encontrar la API, para desplegarla con springboot: https://github.com/mpuertao/tdd-springboot-api-recovered
 
 # Run server
 `ng serve` el cual por defecto levanta el puerto en local 4200
