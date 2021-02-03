@@ -1,8 +1,13 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 
 import { IncrementadorComponent } from './incrementador.component';
 import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
+import { ElementRef, NO_ERRORS_SCHEMA } from '@angular/core';
+
+class MockElementRef extends ElementRef {
+  nativeElement = {};
+}
 
 describe('Incrementador Component', () => {
   let component: IncrementadorComponent;
@@ -10,9 +15,16 @@ describe('Incrementador Component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      providers: [
+        {
+          provide: ElementRef,
+          useClass: MockElementRef
+        }
+      ],
       declarations: [ IncrementadorComponent ],
-      imports: [ FormsModule ]
-    });
+      imports: [ FormsModule ],
+      schemas: [NO_ERRORS_SCHEMA]
+    }).compileComponents();
     fixture = TestBed.createComponent(IncrementadorComponent);
     component = fixture.componentInstance;
   });
