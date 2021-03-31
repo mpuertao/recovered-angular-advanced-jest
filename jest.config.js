@@ -1,3 +1,6 @@
+const path = require("path");
+const rootDir = path.join(__dirname);
+
 module.exports = {
   preset: "jest-preset-angular",
   setupFilesAfterEnv: ["<rootDir>/setupJest.ts"],
@@ -16,16 +19,12 @@ module.exports = {
     "<rootDir>/dist/",
     "<rootDir>/cypress/",
   ],
-  coverageReporters: [
-    "html",
-    "json",
-    "text",
-    "lcov",
-    "clover",
-    "cobertura"
-  ],
+  coverageDirectory: path.join(`${rootDir}`, '/coverage/'), //  Ruta donde quedará los reportes
+  coverageReporters: ["html","json","text","lcov","clover"],
   reporters: [
     "default",
-    "jest-junit"
+    ["jest-junit", {outputDirectory: "./coverage/", outputName: "junit.xml"}],
+    ["jest-html-reporters", {publicPath: "./coverage/", filename: "report-jest.html"}],
+    "jest-sonar"
   ]
 };
