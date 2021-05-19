@@ -47,7 +47,6 @@ describe('Incrementador Component', () => {
     fixture.whenStable().then( () => {
         const input = fixture.debugElement.query( By.css('input') );
         const elem = input.nativeElement;
-        console.log( elem );
         expect( elem.value ).toBe( '55' );
     });
   });
